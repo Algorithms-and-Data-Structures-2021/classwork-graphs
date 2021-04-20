@@ -66,6 +66,14 @@ struct Graph {
   virtual bool RemoveEdge(int u, int v) = 0;
 
   /**
+   * Получение веса ребра в графе.
+   * @param u - индекс начального узла
+   * @param v - индекс конечного узла
+   * @return значение веса ребра
+   */
+  virtual int Edge(int u, int v) const = 0;
+
+  /**
    * Вывод графа в выходной поток.
    */
   virtual void Print(std::ostream &) const = 0;
@@ -135,6 +143,13 @@ public:
   bool RemoveEdge(int u, int v) override {
     // TODO: implement me, pls
     return false;
+  }
+
+  int Edge(int u, int v) const override {
+    if (Exists(u, v)) {
+      return matrix_[u][v];
+    }
+    return NO_EDGE;
   }
 
   void Print(std::ostream &os) const override {
