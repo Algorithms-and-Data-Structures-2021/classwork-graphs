@@ -9,7 +9,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 # library
 add_library(${PROJECT_NAME} STATIC
         include/graph.hpp
-        include/adjacency_matrix_graph.hpp src/adjacency_matrix_graph.cpp)
+        include/adjacency_matrix_graph.hpp src/adjacency_matrix_graph.cpp
+        include/adjacency_list_graph.hpp src/adjacency_list_graph.cpp)
 
 target_include_directories(${PROJECT_NAME} PUBLIC include)
 
