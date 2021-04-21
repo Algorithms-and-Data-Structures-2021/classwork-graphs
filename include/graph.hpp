@@ -12,31 +12,6 @@ struct Graph {
   virtual ~Graph() = default;
 
   /**
-   * @return кол-во ребер в графе
-   */
-  virtual int numEdges() const = 0;
-
-  /**
-   * @return кол-во узлов в графе
-   */
-  virtual int numVertices() const = 0;
-
-  /**
-   * Проверка наличия узла в графе.
-   * @param v - индекс узла
-   * @return true - при наличии узла, false - иначе
-   */
-  virtual bool Exists(int v) const = 0;
-
-  /**
-   * Проверка наличия ребра в графе.
-   * @param u - индекс начального узла
-   * @param v - индекс конечного узла
-   * @return true - при наличии ребра, false - иначе
-   */
-  virtual bool Exists(int u, int v) const = 0;
-
-  /**
    * Добавление нового узла в граф.
    * @return неотрицательный индекс созданного узла
    */
@@ -65,6 +40,31 @@ struct Graph {
    * @return true - при успешном удалении, false - иначе
    */
   virtual bool RemoveEdge(int u, int v) = 0;
+
+  /**
+   * Проверка наличия узла в графе.
+   * @param v - индекс узла
+   * @return true - при наличии узла, false - иначе
+   */
+  virtual bool Exists(int v) const = 0;
+
+  /**
+   * Проверка наличия ребра в графе.
+   * @param u - индекс начального узла
+   * @param v - индекс конечного узла
+   * @return true - при наличии ребра, false - иначе
+   */
+  virtual bool Exists(int u, int v) const = 0;
+
+  /**
+   * @return кол-во ребер в графе
+   */
+  virtual int numEdges() const = 0;
+
+  /**
+   * @return кол-во узлов в графе
+   */
+  virtual int numVertices() const = 0;
 
   /**
    * Получение веса ребра в графе.
