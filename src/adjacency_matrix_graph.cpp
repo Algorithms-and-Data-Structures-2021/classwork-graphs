@@ -7,12 +7,7 @@ namespace itis {
 
 AdjacencyMatrixGraph::AdjacencyMatrixGraph(int num_vertices) {
   assert(num_vertices >= 0);
-
-  matrix_.resize(num_vertices);
-
-  for (auto &matrix_row : matrix_) {
-    matrix_row.resize(num_vertices, NO_EDGE_WEIGHT);
-  }
+  // TODO: implement me, pls
 }
 
 AdjacencyMatrixGraph::AdjacencyMatrixGraph(const Array2d &matrix) {
@@ -22,7 +17,8 @@ AdjacencyMatrixGraph::AdjacencyMatrixGraph(const Array2d &matrix) {
 int AdjacencyMatrixGraph::numEdges() const { return num_edges_; }
 
 int AdjacencyMatrixGraph::numVertices() const {
-  return static_cast<int>(matrix_.size());
+  // TODO: implement me, pls
+  return 0;
 }
 
 bool AdjacencyMatrixGraph::Exists(int u, int v) const {
@@ -36,13 +32,7 @@ bool AdjacencyMatrixGraph::Exists(int v) const {
 int AdjacencyMatrixGraph::AddVertex() {
   const auto new_size = static_cast<int>(numVertices()) + 1;
 
-  // add a new row
-  matrix_.resize(new_size);
-
-  // add a new column
-  for (auto &matrix_row : matrix_) {
-    matrix_row.resize(new_size);
-  }
+  // TODO: implement me, pls
 
   return new_size - 1; // because, index = size - 1
 }
@@ -58,11 +48,7 @@ bool AdjacencyMatrixGraph::RemoveVertex(int v) {
 }
 
 bool AdjacencyMatrixGraph::AddEdge(int u, int v, int weight) {
-  if (Exists(u) && Exists(v)) {
-    matrix_[u][v] = weight;
-    return true;
-  }
-
+  // TODO: implement me, pls
   return false;
 }
 
@@ -72,9 +58,7 @@ bool AdjacencyMatrixGraph::RemoveEdge(int u, int v) {
 }
 
 int AdjacencyMatrixGraph::weight(int u, int v) const {
-  if (Exists(u, v)) {
-    return matrix_[u][v];
-  }
+  // TODO: implement me, pls
   return NO_EDGE_WEIGHT;
 }
 
