@@ -16,10 +16,7 @@ AdjacencyMatrixGraph::AdjacencyMatrixGraph(const Array2d &matrix) {
 
 int AdjacencyMatrixGraph::numEdges() const { return num_edges_; }
 
-int AdjacencyMatrixGraph::numVertices() const {
-  // TODO: implement me, pls
-  return 0;
-}
+int AdjacencyMatrixGraph::numVertices() const { return 0; }
 
 bool AdjacencyMatrixGraph::Exists(int u, int v) const {
   return Exists(u) && Exists(v) && matrix_[u][v] != NO_EDGE_WEIGHT;
