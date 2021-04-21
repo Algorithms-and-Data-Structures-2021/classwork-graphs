@@ -6,6 +6,7 @@
 using namespace itis;
 
 int main(int argc, char **argv) {
+
   // creating a graph with 4 disconnected vertices
   AdjacencyMatrixGraph graph{4};
   graph.Print(std::cout);
