@@ -6,17 +6,17 @@
 
 namespace itis {
 
-// type alias
-using Array2d = std::vector<std::vector<int>>;
-
 struct AdjacencyMatrixGraph : Graph {
 private:
+  // type alias
+  using AdjacencyMatrix = std::vector<std::vector<int>>;
+
   // constants
   static constexpr auto NO_EDGE_WEIGHT = 0;
   static constexpr auto DEFAULT_NUM_VERTICES = 1;
 
   // adjacency matrix storing edge weights
-  Array2d matrix_;
+  AdjacencyMatrix matrix_;
 
   // number of edges in the graph
   int num_edges_{0};
@@ -24,7 +24,7 @@ private:
 public:
   explicit AdjacencyMatrixGraph(int num_vertices = DEFAULT_NUM_VERTICES);
 
-  explicit AdjacencyMatrixGraph(const Array2d &matrix);
+  explicit AdjacencyMatrixGraph(const AdjacencyMatrix &matrix);
 
   int AddVertex() override;
 

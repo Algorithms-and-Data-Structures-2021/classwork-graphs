@@ -10,7 +10,7 @@ AdjacencyMatrixGraph::AdjacencyMatrixGraph(int num_vertices) {
   // TODO: implement me, pls
 }
 
-AdjacencyMatrixGraph::AdjacencyMatrixGraph(const Array2d &matrix) {
+AdjacencyMatrixGraph::AdjacencyMatrixGraph(const AdjacencyMatrix &matrix) {
   // TODO: implement me, pls
 }
 
