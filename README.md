@@ -1,1 +1,1 @@
-# C++ CMake project template
+# Graph representation
